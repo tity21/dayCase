@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        
+        img {
+            width: 200px;
+            border: 2px solid #ccc;
+            box-shadow: 2px 2px rgb(214, 212, 212);
+            border-radius: 5px;
+            position: absolute;
+        }
+        
+        .list {
+            width: 100%;
+            height: 40px;
+            background: pink;
+            line-height: 40px;
+            position: relative;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .list h4,
+        .list ol,
+        .list input {
+            float: left;
+            margin-left: 50px;
+        }
+        
+        .list ol li {
+            float: left;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+        
+        .list input {
+            width: 200px;
+            height: 30px;
+            border: 1px solid #ccc;
+            background: #ccc;
+            outline: none;
+            border-radius: 5px;
+        }
+        
+        .box {
+            width: 1600px;
+            height: 1500px;
+        }
+        
+        .nav {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background: skyblue;
+            position: fixed;
+            top: 42px;
+            left: 0;
+            z-index: 2;
+        }
+        
+        .nav span {
+            margin-left: 50px;
+        }
+        
+        .list .diss {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            background: #fff;
+            position: absolute;
+            top: 30px;
+            right: 500px;
+            z-index: 5;
+            display: none;
+        }
+        
+        .firstpage li.active {
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="list">
+            <h4>小红书</h4>
+            <ol class="firstpage">
+                <li>首页</li>
+                <li>社区精选</li>
+                <li>关于我们</li>
+                <li>加入我们</li>
+                <li>招商合作</li>
+            </ol>
+            <input type="text" placeholder="雅诗兰黛气垫">
+            <div class="diss">
+                <p>124564563</p>
+                <p>12456453</p>
+                <p>178978923</p>
+                <p>12787983</p>
+            </div>
+        </div>
+        <div class="nav">
+
+        </div>
+
+        <div class="wrap">
+            <img src="images/0.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpg" alt="">
+            <img src="images/4.jpg" alt="">
+            <img src="images/5.jpg" alt="">
+            <img src="images/6.jpg" alt="">
+            <img src="images/7.jpg" alt="">
+            <img src="images/8.jpg" alt="">
+            <img src="images/9.jpg" alt="">
+            <img src="images/10.jpg" alt="">
+            <img src="images/11.jpg" alt="">
+            <img src="images/12.jpg" alt="">
+            <img src="images/13.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="js/common/jquery-3.1.1.min.js"></script>
+    <script src="water.js"></script>
+    <script>
+        var oid = [{
+            name: "推荐",
+            oid: "recommend"
+        }, {
+            name: "时尚",
+            oid: "fasion"
+        }, {
+            name: "美妆",
+            oid: "cosmetics"
+        }, {
+            name: "美食",
+            oid: "food"
+        }, {
+            name: "运动",
+            oid: "sport"
+        }, {
+            name: "影音",
+            oid: "media"
+        }, {
+            name: "旅行",
+            oid: "travel"
+        }, {
+            name: "居家",
+            oid: "home"
+        }, {
+            name: "母婴",
+            oid: "babycare"
+        }, {
+            name: "读书",
+            oid: "books"
+        }, {
+            name: "数码",
+            oid: "digital"
+        }, {
+            name: "时尚男士",
+            oid: "mens_fasion"
+        }]
+        var html = ``;
+        $.each(oid, function(i, v) {
+            html += `<span>${v.name}</span>`;
+        })
+        $('.nav').html(html);
+
+        $('.list input').on('click', function() {
+            $(this).css("border", "1px solid red");
+            $(".diss").toggle();
+            if (!$('.diss').is(':hidden')) {
+                $('.diss').css("z-index", "9999");
+            }
+        })
+        $('.firstpage li').hover(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+        }, function() {
+            $(this).removeClass('active');
+        })
+
+        var starttop = $('.nav').position().top + $('.nav').height() + 20;
+        var sumw = $(window).width();
+        var imgw = $('img').eq(0).width() + 20;
+        var lie = Math.floor(sumw / imgw);
+        var arr = [];
+        var p = 0;
+
+        function init(start, end) {
+            $('.wrap').water({
+                start: start,
+                end: end
+            })
+
+            //     for (var i = start; i < end; i++) {
+            //         if (i < lie) {
+            //             arr.push(starttop);
+            //         }
+            //         var minH = Math.min.apply(null, arr);
+            //         var ind = $.inArray(minH, arr);
+            //         $('img').eq(i).stop().animate({
+            //             left: imgw * ind,
+            //             top: minH
+            //         }, 1000);
+            //         arr[ind] += $('img').eq(i).height() + 10;
+            //         p++;
+            //     }
+        }
+        init(0, $('img').length);
+
+
+        function addimg() {
+            $.ajax({
+                url: 'data.json',
+                success: function(data) {
+                    if (data.code == 0) {
+                        render(data);
+                    }
+                }
+            })
+        }
+
+        function render(data) {
+            var con = 0;
+            $.each(data.result, function(i, v) {
+                var imgs = new Image();
+                imgs.onload = function() {
+                    con++;
+                    if (con == data.result.length) {
+                        init(p, $('img').length);
+                    }
+                }
+                imgs.src = v.src;
+                var minH = Math.min.apply(null, arr);
+                var ind = $.inArray(minH, arr);
+                $(imgs).css({
+                    left: ind * imgw,
+                    top: minH
+                });
+                $('.wrap').append(imgs);
+            });
+        }
+
+        var newarr = [];
+        $(window).on('scroll', function() {
+            newarr.push($(this).scrollTop());
+            if (newarr[newarr.length - 1] > newarr[newarr.length - 2]) {
+                $('.nav').hide();
+            } else {
+                $('.nav').show();
+            }
+            if ($(document).height() - $(window).height() <= $(this).scrollTop()) {
+                addimg();
+
+            }
+        })
+    </script>
+</body>
+
+</html>

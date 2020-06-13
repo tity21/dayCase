@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5]
+        // forEach高阶函数
+        // Array.prototype.myForeach = function (fn) {
+        //     for (var i = 0; i < this.length; i++) {
+        //         fn(this[i], i, this)
+        //     }
+        // }
+
+        // arr.myForeach((item, index, Array) => {
+        //     console.log(item, index, Array);
+        // })
+
+
+
+
+        // reduce高阶函数
+        // Array.prototype.myReduce = function (fn, init) {
+        //     console.log(fn, init);
+        //     if (init === undefined) {
+        //         init = this[0]
+        //     }
+        //     for (var i = 0; i < this.length - 1; i++) {
+        //         init = fn(init, this[i + 1], i, this)
+        //     }
+        //     return init
+        // }
+
+        // var a = arr.myReduce((init, now, index, Array) => {
+        //     console.log(init, now);
+        //     return init * now
+        // })
+        // console.log(a);
+        // var arr = [1, 2, 3, 4, 5]
+
+        // var news = arr.reduce((init, now, index, Array) => {
+            // console.log(init, now);
+        //     return a + b
+        // })
+        // console.log(news);
+
+    </script>
+</body>
+
+</html>

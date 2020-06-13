@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "message": "发送成功",
+    "result": [{
+        "src": "images/15.jpg"
+    }, {
+        "src": "images/16.jpg"
+    }, {
+        "src": "images/17.jpg"
+    }, {
+        "src": "images/18.jpg"
+    }, {
+        "src": "images/19.jpg"
+    }, {
+        "src": "images/20.jpg"
+    }, {
+        "src": "images/21.jpg"
+    }, {
+        "src": "images/22.jpg"
+    }, {
+        "src": "images/23.jpg"
+    }]
+}

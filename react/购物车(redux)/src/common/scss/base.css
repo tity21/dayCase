@@ -1,0 +1,143 @@
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+table,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea,
+span,
+strong,
+em,
+b,
+i,
+u,
+a,
+img,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+address,
+dialog {
+    display: block;
+}
+
+time,
+mark,
+cite,
+ruby,
+rp,
+rt {
+    display: inline;
+}
+
+html {
+    font-family: "微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+    font-size: 625%;
+}
+
+body {
+    font-size: .14rem;
+    color: #000;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: .16rem;
+}
+
+img {
+    border: none;
+}
+
+img,
+input,
+textarea,
+select,
+output {
+    vertical-align: middle;
+}
+
+a {
+    background: transparent;
+    text-decoration: none;
+    color: #333;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+}
+
+a:hover {
+    color: #006699;
+}
+
+/* 清除浮动 */
+
+.clear {
+    clear: both;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* 单行文本溢出隐藏 */
+
+.single-line {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 多行文本溢出隐藏 */
+
+.multi-line {
+    width: 150px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+body,
+html,
+#root,
+.App {
+    height: 100%;
+    width: 100%;
+}

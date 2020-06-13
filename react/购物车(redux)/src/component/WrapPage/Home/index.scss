@@ -1,0 +1,93 @@
+.home {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .home-header {
+        height: 45px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        border-bottom: solid 1px #ccc;
+        overflow: hidden;
+    }
+    .home-section {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .home-section-header {
+            border-bottom: solid 1px rgb(233, 232, 232);
+            height: 40px;
+            width: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            input {
+                height: 20px;
+                width: 20px;
+            }
+        }
+        .home-section-section {
+            flex: 1;
+            width: 100%;
+            overflow: hidden;
+            .home-section-section-auto {
+                height: auto;
+                width: 100%;
+                dl {
+                    height: 100px;
+                    width: 100%;
+                    border-bottom: solid 1px #ccc;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    dd {
+                        img {
+                            height: 80px;
+                            width: 80px;
+                        }
+                    }
+                    dt {
+                        padding: 10px 0 10px 10px;
+                        box-sizing: border-box;
+                        flex: 1;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+                            p {
+                                display: flex;
+                                align-items: center;
+                                border: solid 1px #999;
+                                height: 25px;
+                                width: 25px;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 21px;
+                                visibility: middle;
+                            }
+                        }
+                    }
+                    .single-line {
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}

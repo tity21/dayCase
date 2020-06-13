@@ -1,2 +1,2 @@
-# dayCase
-日常的小积累
+# DailyCase
+日常积累的一些小功能

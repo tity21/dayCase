@@ -1,0 +1,134 @@
+.shopCar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .shopCar-header {
+        height: 45px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        border-bottom: solid 1px #ccc;
+        overflow: hidden;
+    }
+    .shopCar-section {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .shopCar-section-header {
+            border-bottom: solid 1px rgb(233, 232, 232);
+            height: 40px;
+            width: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            input {
+                height: 20px;
+                width: 20px;
+            }
+        }
+        .shopCar-section-section {
+            flex: 1;
+            width: 100%;
+            overflow: hidden;
+            .shopCar-section-section-auto {
+                height: auto;
+                width: 100%;
+                dl {
+                    height: 100px;
+                    width: 100%;
+                    border-bottom: solid 1px #ccc;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    dd {
+                        input {
+                            height: 15px;
+                            width: 15px;
+                            margin-right: 10px;
+                        }
+                        img {
+                            height: 80px;
+                            width: 80px;
+                        }
+                    }
+                    dt {
+                        padding: 10px 0 10px 10px;
+                        box-sizing: border-box;
+                        flex: 1;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        h1 {}
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+                            p {
+                                display: flex;
+                                align-items: center;
+                                span {
+                                    border: solid 1px #999;
+                                    height: 25px;
+                                    width: 25px;
+                                    border-radius: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 21px;
+                                    visibility: middle;
+                                }
+                            }
+                        }
+                    }
+                    .single-line {
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+        .shopCar-section-footer {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 10px;
+            box-sizing: border-box;
+            div {
+                display: flex;
+                align-items: center;
+                p {
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    input {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+                &>b {
+                    font-size: 12px;
+                }
+                &>span {
+                    font-size: 12px;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                }
+            }
+            button {
+                height: 100%;
+                width: 30%;
+            }
+        }
+    }
+}
